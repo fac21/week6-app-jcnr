@@ -13,7 +13,7 @@ CREATE TABLE users (
 
 CREATE TABLE sessions (
     sid TEXT PRIMARY KEY,
-    data JSON NOT NULL,
+    data JSON NOT NULL
 );
 
 CREATE TABLE reviews (
