@@ -1,8 +1,6 @@
 BEGIN;
 
-
 DROP TABLE IF EXISTS users, sessions, reviews CASCADE;
-
 
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
