@@ -1,8 +1,6 @@
 BEGIN;
 
-
 DROP TABLE IF EXISTS users, sessions, reviews CASCADE;
-
 
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
@@ -13,7 +11,7 @@ CREATE TABLE users (
 
 CREATE TABLE sessions (
     sid TEXT PRIMARY KEY,
-    data JSON NOT NULL,
+    data JSON NOT NULL
 );
 
 CREATE TABLE reviews (
