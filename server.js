@@ -1,5 +1,7 @@
 const express = require("express");
 const home = require("./routes/homepage.js");
+const signUp = require("./routes/signUp.js");
+const cookieParser = require("cookie-parser");
 
 const server = express();
 
@@ -12,11 +14,17 @@ function logger(req, res, next) {
 
 server.use(logger);
 
+server.use(cookieParser(process.env.COOKIE_SECRET));
+
 server.get("/", home.get);
 
-// server.get("/", (req, res) => {
-//     res.send("<h1>OUR TEAM ROCKS</h1>")
-// })
+server.get("/sign-up", signUp.get);
+server.post("/sign-up", bodyParser, signUp.post);
+
+// server.get("/log-in", logIn.get);
+// server.post("/log-in", logIn.post);
+
+// server.post("/log-out", logOut.post);
 
 // server.post("/submit", bodyParser, (req, res) => {
 
