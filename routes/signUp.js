@@ -1,6 +1,5 @@
 const auth = require("../auth.js");
-//NEED TO CONFIRM FROM C&R's CODE:
-// const templates = require("");
+const templates = require("../templates.js");
 
 // function get(request, response) {
 //   const signUpForm = `
@@ -20,19 +19,23 @@ const auth = require("../auth.js");
 // }
 
 function get(request, response) {
-  response.send(`
-      <h1>Create an account</h1>
-      <form action="sign-up" method="POST">
-        <label for="username">Name</label>
-        <input type="text" id="username" name="username">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email">
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password">
-        <button type="submit">Sign up</button>
-      </form>
-    `);
-}
+  const createAccount = `
+       <h1>Create an account</h1>
+       <form action="sign-up" method="POST">
+         <label for="username">Name</label>
+         <input type="text" id="username" name="username">
+         <label for="email">Email</label>
+         <input type="email" id="email" name="email">
+         <label for="password">Password</label>
+         <input type="password" id="password" name="password">
+         <button type="submit">Sign up</button>
+       </form>
+  `
+     
+ const html = templates.htmlTemplate(createAccount, "");
+ response.send(html);
+     ;
+ }
 
 function post(request, response) {
   //console.log(request.body);

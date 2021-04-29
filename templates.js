@@ -18,7 +18,7 @@ function htmlTemplate(bodyContent, headerContent) {
       <title>Grinder</title>
     </head>
     <body>
-    <img class='bg-image' src="" alt='random image'>
+    <img class='bg-image' src="/default-skate-bkground.jpg" alt='random image'>
     <img class="logo" src="/Grinder-logo.png" alt="Grinder logo"><br/>
 
     <header>
