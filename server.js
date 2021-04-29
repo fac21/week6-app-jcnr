@@ -2,6 +2,7 @@ const express = require("express");
 const home = require("./routes/homepage.js");
 const signUp = require("./routes/signUp.js");
 const logIn = require("./routes/logIn.js");
+const logOut = require("./routes/logOut.js");
 
 const cookieParser = require("cookie-parser");
 
@@ -24,9 +25,9 @@ server.get("/sign-up", signUp.get);
 server.post("/sign-up", bodyParser, signUp.post);
 
 server.get("/log-in", logIn.get);
-server.post("/log-in", logIn.post);
+server.post("/log-in", bodyParser, logIn.post);
 
-// server.post("/log-out", logOut.post);
+server.post("/log-out", bodyParser, logOut.post);
 
 // server.post("/submit", bodyParser, (req, res) => {
 
