@@ -19,8 +19,7 @@ function createSession(sid, dataObj) {
 
 function deleteSession(sid) {
   const DELETE_SESSION = `DELETE FROM sessions WHERE sid=$1`;
-  return db
-    .query(DELETE_SESSION, [sid]);
+  return db.query(DELETE_SESSION, [sid]);
 }
 
 function getSession(sid) {
@@ -31,15 +30,14 @@ function getSession(sid) {
   });
 }
 
-
 function getUser(email) {
   const selectUser = `
   SELECT id, email, password, username FROM users WHERE email=$1;`;
-  return db.query(selectUser, [email])
-  .then((result) => {
+  return db.query(selectUser, [email]).then((result) => {
+    //console.log({ result });
+    console.log(result.rows[0]);
     return result.rows[0];
-  
-  })
+  });
 }
 
 function getReviews() {
@@ -59,11 +57,11 @@ function getReviews() {
     });
 }
 
-function getUser(reviewer) {
-  const USER_ID = "SELECT id FROM users WHERE username=$1";
-  //console.log(db.query(USER_ID, [reviewer]));
-  return db.query(USER_ID, [reviewer]);
-}
+// function getUser(reviewer) {
+//   const USER_ID = "SELECT id FROM users WHERE username=$1";
+//   //console.log(db.query(USER_ID, [reviewer]));
+//   return db.query(USER_ID, [reviewer]);
+// }
 
 function createReview(parkname, location, review, reviewer) {
   //console.log(reviewer);
@@ -79,5 +77,5 @@ module.exports = {
   getReviews,
   getUser,
   createReview,
-  deleteSession
+  deleteSession,
 };

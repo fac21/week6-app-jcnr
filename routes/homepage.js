@@ -19,13 +19,12 @@ function get(request, response) {
         <label for="location">Location</label>
         <input type="text" id="location" name="location" required>
         <label for="review">Enter Your Review</label>
-        <textarea id="review" name="review rows="4" cols="50" required></textarea>
+        <textarea id="review" name="review" rows="4" cols="50" required></textarea>
         <button type="submit">Submit</button>
       </form> 
     `;
     });
   } else {
-
     userHTML = `<h1>Hello Skate Mate</h1>
 
     <a href="/sign-up">Sign up</a>
