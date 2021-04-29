@@ -1,3 +1,6 @@
+const dotenv = require("dotenv");
+dotenv.config();
+
 function htmlTemplate(bodyContent, headerContent) {
   return `
     <!DOCTYPE html>
@@ -12,6 +15,7 @@ function htmlTemplate(bodyContent, headerContent) {
       <title>Grinder</title>
     </head>
     <body>
+    <img class='bg-image' src="" alt='random image'>
     <header>
     ${headerContent}
     </header>
@@ -19,6 +23,23 @@ function htmlTemplate(bodyContent, headerContent) {
       ${bodyContent}
       </main>
     </body>
+    <script>
+
+    window.addEventListener("load", () => {
+            let randomNum = Math.floor(Math.random() * 10);
+            fetch("https://api.unsplash.com/photos/random?query=skate&client_id=${process.env.API_KEY}&orientation=portrait")
+                .then((response) => {
+                    if (!response.ok) throw new Error(response.status);
+                    return response.json()
+                })
+                .then((data) => {
+                    document.querySelector('.bg-image').src = data.urls.regular;
+                })
+                .catch((error) => console.log(error));
+    });
+    
+    </script>
+    
     </html>
     `;
 }

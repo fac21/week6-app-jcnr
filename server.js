@@ -6,6 +6,8 @@ const logIn = require("./routes/logIn.js");
 const cookieParser = require("cookie-parser");
 
 const server = express();
+const staticHandler = express.static("public");
+server.use(staticHandler);
 
 const bodyParser = express.urlencoded();
 
