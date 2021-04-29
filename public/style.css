@@ -1,15 +1,18 @@
 body {
     margin: 0 auto;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
 
   /* Some sensible defaults... */
 
   * {
     box-sizing: border-box;
-    margin: 0;
+    margin: 0.5rem 0;
     padding: 0;
+    font-family: 'Krona One', sans-serif;
 }
   
   img {
@@ -20,4 +23,12 @@ body {
     position: absolute;
     z-index: -1;
     opacity: 0.5;
+}
+
+.logo {
+  position: relative;
+  width: 200px;
+  height: auto;
+  z-index: 0;
+  opacity: 1;
 }

@@ -6,6 +6,9 @@ function htmlTemplate(bodyContent, headerContent) {
     <!DOCTYPE html>
     <html lang="en">
     <head>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+    </style> 
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="description" content="">
@@ -16,10 +19,9 @@ function htmlTemplate(bodyContent, headerContent) {
     </head>
     <body>
     <img class='bg-image' src="" alt='random image'>
+    <img class="logo" src="/Grinder-logo.png" alt="Grinder logo"><br/>
+
     <header>
-
-    <img src="/images/facbook-logo.png" alt="facbook logo"><br/>
-
     ${headerContent}
     </header>
         <main>
