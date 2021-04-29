@@ -9,7 +9,7 @@ function get(request, response) {
       <input type="email" id="email" name="email">
       <label for="password">Password</label>
       <input type="password" id="password" name="password">
-      <button>Log in</button>
+      <button type="submit">Log in</button>
     </form>
     `;
     const html = templates.htmlTemplate(loginForm, "");
@@ -17,7 +17,7 @@ function get(request, response) {
 }
 
 function post(request, response) {
-    const { email, password} = request.body;
+    const { email, password } = request.body;
     auth
         .verifyUser(email, password)
         .then(auth.saveUserSession)
@@ -26,7 +26,7 @@ function post(request, response) {
             response.redirect("/");
         })
         .catch((error) => {
-            console.error(error);
+            console.error("error", error);
             response.send(`<h1>User not found!</h1>`);
         });
 }
