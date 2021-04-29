@@ -1,13 +1,6 @@
-//const db = require("../database/connection.js");
+const db = require("../database/connection.js");
 const model = require("../database/model.js");
 const html = require("../templates.js");
-
-// function get(request, response) {
-//   console.log(request.signedCookies);
-//   model.viewAllUserData().then(() => {
-//     response.send("<h1>Hello world</h1>");
-//   });
-// }
 
 function get(request, response) {
   const sid = request.signedCookies.sid;
@@ -20,10 +13,8 @@ function get(request, response) {
         <button>Log out</button>
       </form>
     `;
-      //response.send();
     });
   } else {
-    //response.send(
     userHTML = `<h1>Hello anonymous</h1>
     <a href="/sign-up">Sign up</a>
     <span> | </span>

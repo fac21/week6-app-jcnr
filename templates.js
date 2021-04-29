@@ -13,8 +13,6 @@ function htmlTemplate(bodyContent, headerContent) {
     </head>
     <body>
     <header>
-    /* <img src="/images/facbook-logo.png" alt="facbook logo"><br/> */
-    <a href="/ROUTE FOR LOGIN">Login / Sign Up</a>
     ${headerContent}
     </header>
         <main>
