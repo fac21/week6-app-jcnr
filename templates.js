@@ -17,6 +17,9 @@ function htmlTemplate(bodyContent, headerContent) {
     <body>
     <img class='bg-image' src="" alt='random image'>
     <header>
+
+    <img src="/images/facbook-logo.png" alt="facbook logo"><br/>
+
     ${headerContent}
     </header>
         <main>

@@ -35,7 +35,7 @@ function get(request, response) {
 }
 
 function post(request, response) {
-  console.log(request.body);
+  //console.log(request.body);
   const { email, password, username } = request.body;
   auth
     .createUser(email, password, username)

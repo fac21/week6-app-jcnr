@@ -1,8 +1,11 @@
 const express = require("express");
 const home = require("./routes/homepage.js");
 const signUp = require("./routes/signUp.js");
+
 const logIn = require("./routes/logIn.js");
 const logOut = require("./routes/logOut.js");
+
+const postReview = require("./routes/postReview.js");
 
 const cookieParser = require("cookie-parser");
 
@@ -31,9 +34,7 @@ server.post("/log-in", bodyParser, logIn.post);
 
 server.post("/log-out", bodyParser, logOut.post);
 
-// server.post("/submit", bodyParser, (req, res) => {
-
-// })
+server.post("/post-review", bodyParser, postReview.post);
 
 server.use((req, res) => {
   res.status(404).send("<h1>Not found</h1>");
