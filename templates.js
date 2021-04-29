@@ -27,7 +27,7 @@ function htmlTemplate(bodyContent, headerContent) {
 
     window.addEventListener("load", () => {
             let randomNum = Math.floor(Math.random() * 10);
-            fetch("https://api.unsplash.com/photos/random?query=skate&client_id=${process.env.API_KEY}&orientation=portrait")
+            fetch("https://api.unsplash.com/photos/random?query=skatepark&client_id=${process.env.API_KEY}&orientation=portrait")
                 .then((response) => {
                     if (!response.ok) throw new Error(response.status);
                     return response.json()
