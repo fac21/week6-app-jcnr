@@ -25,7 +25,9 @@ function get(request, response) {
     `;
     });
   } else {
+
     userHTML = `<h1>Hello Skate Mate</h1>
+
     <a href="/sign-up">Sign up</a>
     <span> | </span>
     <a href="/log-in">Log in</a>

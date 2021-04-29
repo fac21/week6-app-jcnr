@@ -1,10 +1,17 @@
 const express = require("express");
 const home = require("./routes/homepage.js");
 const signUp = require("./routes/signUp.js");
+
+const logIn = require("./routes/logIn.js");
+const logOut = require("./routes/logOut.js");
+
 const postReview = require("./routes/postReview.js");
+
 const cookieParser = require("cookie-parser");
 
 const server = express();
+const staticHandler = express.static("public");
+server.use(staticHandler);
 
 const bodyParser = express.urlencoded();
 
@@ -22,14 +29,10 @@ server.get("/", home.get);
 server.get("/sign-up", signUp.get);
 server.post("/sign-up", bodyParser, signUp.post);
 
-// server.get("/log-in", logIn.get);
-// server.post("/log-in", logIn.post);
+server.get("/log-in", logIn.get);
+server.post("/log-in", bodyParser, logIn.post);
 
-// server.post("/log-out", logOut.post);
-
-// server.post("/submit", bodyParser, (req, res) => {
-
-// })
+server.post("/log-out", bodyParser, logOut.post);
 
 server.post("/post-review", bodyParser, postReview.post);
 
