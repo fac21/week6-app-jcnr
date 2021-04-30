@@ -1,11 +1,14 @@
-# Welcome to 
-![Grinder-logo](https://user-images.githubusercontent.com/54359248/116686238-71485680-a9ab-11eb-9fcd-4bbc2fc84d75.png)
+# Welcome to ![Grinder-logo](https://user-images.githubusercontent.com/54359248/116686238-71485680-a9ab-11eb-9fcd-4bbc2fc84d75.png)
 
+## An app where you can post reviews of your favourite skateparks for everyone to see
+### - Now when you wanna go for a roll with your mates, everybody can join in!
 
-## Jo - User
-## Craig - Deployment
-## Neville - Quality
-## Rosie - Facilitator
+<hr>
+
+### Jo - User
+### Craig - Deployment
+### Neville - Quality
+### Rosie - Facilitator
 
 ### To run this locally:
 
