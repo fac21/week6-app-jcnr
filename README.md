@@ -10,6 +10,19 @@
 ### Neville - Quality
 ### Rosie - Facilitator
 
+<hr>
+
+### Functionality:
+- submit information to your site for anyone to see :white_check_mark:
+- come back to your site later and see what I posted is still there :white_check_mark:
+- be the only person allowed to delete my stuff :x:
+- Forms for users to sign up and log in :white_check_mark:
+- A form for users to submit data only accessible to logged in users :white_check_mark:
+- A page showing all the data :white_check_mark:
+- Semantic form elements with correctly associated labels :white_check_mark:
+- A Postgres database hosted on Heroku :white_check_mark:
+- Hidden environment variables (i.e. not on GitHub) :white_check_mark:
+
 ### To run this locally:
 
 - `git clone` the repo
