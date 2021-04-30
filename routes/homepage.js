@@ -23,6 +23,10 @@ function get(request, response) {
         <button type="submit">Submit</button>
       </form> 
     `;
+    })
+    .catch((error) => {
+      console.error("error", error);
+      response.send(`<h1>Something has gone wrong! :(</h1>`);
     });
   } else {
     userHTML = `<h1>Hello Skate Mate</h1>
@@ -49,6 +53,10 @@ function get(request, response) {
       })
       .join("");
     response.send(html.htmlTemplate(reviewList, userHTML));
+  })
+  .catch((error) => {
+    console.error("error", error);
+    response.send(`<h1>Something has gone wrong! :(</h1>`);
   });
 }
 
