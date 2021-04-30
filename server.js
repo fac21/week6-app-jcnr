@@ -37,7 +37,7 @@ server.post("/log-out", bodyParser, logOut.post);
 server.post("/post-review", bodyParser, postReview.post);
 
 server.use((req, res) => {
-  res.status(404).send("<h1>Not found</h1>");
+  res.status(404).send("<h1>Page not found! :(</h1>");
 });
 
 const PORT = process.env.PORT || 3000;

@@ -1,16 +1,12 @@
 body {
     margin: 0 auto;
     text-align: center;
-    display: flex;
     align-items: center;
     justify-content: center;
 }
 
-  /* Some sensible defaults... */
-
   * {
     box-sizing: border-box;
-    margin: 0.5rem 0;
     padding: 0;
     font-family: 'Krona One', sans-serif;
 }
@@ -30,4 +26,16 @@ body {
   height: auto;
   z-index: 0;
   opacity: 1;
+}
+
+form[action='post-review'] {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stack-sm > * + * {
+  margin-top: 0.5rem;
 }

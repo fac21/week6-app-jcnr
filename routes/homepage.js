@@ -13,7 +13,7 @@ function get(request, response) {
         <button>Log out</button>
       </form>
       <h2>Write a Review!</h2>
-      <form action="post-review" method="POST">
+      <form action="post-review" method="POST" class="stack-sm">
         <label for="parkname">Skate Park</label>
         <input type="text" id="parkname" name="parkname" required>
         <label for="location">Location</label>
@@ -34,6 +34,7 @@ function get(request, response) {
     <a href="/sign-up">Sign up</a>
     <span> | </span>
     <a href="/log-in">Log in</a>
+    <h2> Skate Park Reviews</h2>
   `;
   }
   db.query(
