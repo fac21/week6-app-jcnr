@@ -1,5 +1,12 @@
 # week6-app-jcnr
 
+Welcome to ![Grinder-logo](https://user-images.githubusercontent.com/54359248/116686238-71485680-a9ab-11eb-9fcd-4bbc2fc84d75.png)
+
+
+## Jo - User
+## Craig - Deployment
+## Neville - Quality
+## Rosie - Facilitator
 
 ### To run this locally:
 
