@@ -36,12 +36,9 @@ function get(request, response) {
     <a href="/log-in">Log in</a>
   `;
   }
-  //const reviewList = model.getReviews();
-  //console.log(reviewList);
   db.query(
     "SELECT reviews.park_name, reviews.park_location, reviews.review_content, users.username FROM reviews INNER JOIN users ON reviews.user_id = users.id"
   ).then((result) => {
-    //console.log(result);
     const reviews = result.rows; // an array of obecjts, where each object is a row from database (parkname, review content etc)
     const reviewList = reviews
       .map((review) => {

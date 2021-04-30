@@ -5,7 +5,10 @@
 
 - `git clone` the repo
 - `npm install` to install the necessary node packages.
-- Create a `.env` file in the root folder and add API_KEY, DATABASE_URL and COOKIE_SECRET
+- Create a `.env` file in the root folder following the example of `.env.sample`.
+    - To get `API_KEY`, make an account on [](https://unsplash.com/developers) and generate your own client key.
+    - COOKIE_SECRET should be a random long string.
+    - DATABASE_URL should point to your local database and be in the form `postgres://<user>:<password>@localhost:<PORT>/<database_name>`
 - `npm run dev` to run the server
 - visit `localhost:3000`
 

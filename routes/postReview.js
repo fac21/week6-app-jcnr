@@ -19,7 +19,7 @@ function post(request, response) {
     })
     .catch((error) => {
       console.error("error", error);
-      response.send(`<h1>Something has gone wrong! :(</h1>`);
+      response.send(`<h1>Unable to post review! :(</h1>`);
     });
 }
 
