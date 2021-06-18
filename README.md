@@ -5,23 +5,36 @@
 
 <hr>
 
-### Jo - User
-### Craig - Deployment
-### Neville - Quality
-### Rosie - Facilitator
+### Team
+
+- [Jo](https://github.com/jamdelion) - User
+- [Craig](https://github.com/tiarama) - Deployment
+- [Neville](https://github.com/ByteSizedIT) - Quality
+- [Rosie](https://github.com/rosie-odonnell) - Facilitator
 
 <hr>
 
 ### Functionality:
-- submit information to your site for anyone to see :white_check_mark:
-- come back to your site later and see what I posted is still there :white_check_mark:
-- be the only person allowed to delete my stuff :x:
-- Forms for users to sign up and log in :white_check_mark:
-- A form for users to submit data only accessible to logged in users :white_check_mark:
-- A page showing all the data :white_check_mark:
-- Semantic form elements with correctly associated labels :white_check_mark:
-- A Postgres database hosted on Heroku :white_check_mark:
-- Hidden environment variables (i.e. not on GitHub) :white_check_mark:
+
+✔️ Submit information to your site for anyone to see 
+
+✔️ Come back to your site later and see what I posted is still there 
+
+:x: Be the only person allowed to delete my stuff 
+
+✔️ Forms for users to sign up and log in
+
+✔️ A form for users to submit data only accessible to logged in users 
+
+✔️ A page showing all the data 
+
+✔️ Semantic form elements with correctly associated labels 
+
+✔️ A Postgres database hosted on Heroku 
+
+✔️ Hidden environment variables (i.e. not on GitHub) 
+
+---
 
 ### To run this locally:
 
@@ -34,7 +47,8 @@
 - `npm run dev` to run the server
 - visit `localhost:3000`
 
+---
 
-Draft schema:
+### Draft schema:
 
 ![image](https://user-images.githubusercontent.com/31373245/116393757-f3087a80-a819-11eb-8cbc-53a3bc17401a.png)
